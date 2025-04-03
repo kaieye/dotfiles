@@ -30,6 +30,37 @@ sudo apt install fzf
 pip install neovim ast-grep-cli https://repo.huaweicloud.com/repository/pypi/simple
 ```
 
+## git上传
+
+### 新建项目
+
+```
+在本地新建一个文件夹后
+git init
+git config --global user.name "kaieye"
+git config --global user.email "623917753@qq.com"
+git add .
+git status
+git commit -m "first commit"
+git branch -M main
+
+到github创建一个仓库命名为dotfiles
+点击github的头像->settings->SSH and GPG keys->新建SSH KEY
+
+在终端输入ssh-keygen,回车默认即可，把得到的.pub文件的内容粘贴到github中生成ssh key
+ssh -T git@github.com
+出现hi即成功
+git remote add origin git@github.com:kaieye/dotfiles.git
+git push origin main
+```
+
+## 已有项目
+
+```
+git clone https://github.com/kaieye/dotfiles.git
+
+```
+
 
 
 ## 字体下载
@@ -261,6 +292,7 @@ remotePort = 1234
 修改阿里云服务器的frps.toml
 bindPort = 8787
 ```
+
 
 
 
